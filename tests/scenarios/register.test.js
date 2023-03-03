@@ -11,4 +11,9 @@ describe('Register', () => {
     assert.isString(response.data.error);
     assert.equal(response.data.error, data.ERROR_REGISTER_MESSAGE.error);
   });
+
+  it('Should successful register when insert valid data', async () => {
+    const response = await ReqresApi.register(data.VALID_REGISTER);
+    assert.equal(response.status, 200);
+  });
 });

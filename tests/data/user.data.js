@@ -1,9 +1,9 @@
 export const INVALID_REGISTER = {
-  email: "eve.holt@reqres.in",
+  email: 'eve.holt@reqres.in',
 };
 
 export const ERROR_REGISTER_MESSAGE = {
-  error: "Missing password",
+  error: 'Missing password',
 };
 
 export const LIST_USER_PARAM = {
@@ -11,6 +11,11 @@ export const LIST_USER_PARAM = {
 };
 
 export const CREATE_USER = {
-  name: "morpheus",
-  job: "leader",
+  name: 'morpheus',
+  job: 'leader',
+};
+
+export const VALID_REGISTER = {
+  email: 'eve.holt@reqres.in',
+  password: 'pistol',
 };

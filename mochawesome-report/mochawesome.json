@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 3,
-    "tests": 3,
-    "passes": 3,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-01T16:11:33.869Z",
-    "end": "2023-03-01T16:11:35.236Z",
-    "duration": 1367,
-    "testsRegistered": 3,
+    "start": "2023-03-02T15:27:27.981Z",
+    "end": "2023-03-02T15:27:29.932Z",
+    "duration": 1951,
+    "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "855549df-0650-497f-be06-0ec8e695683f",
+      "uuid": "392f2599-e595-405f-b3e1-7638dd897b49",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "61e1e52b-80af-44a3-9e66-d58124c20b0b",
+          "uuid": "40443b0c-4853-49cd-bf91-a348d8777a96",
           "title": "Create",
           "fullFile": "D:\\QA\\QA_NestAcademy\\nestAPI\\tests\\scenarios\\create.test.js",
           "file": "\\tests\\scenarios\\create.test.js",
@@ -38,7 +38,7 @@
               "title": "Should successful create data",
               "fullTitle": "Create Should successful create data",
               "timedOut": false,
-              "duration": 571,
+              "duration": 606,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "const response = await ReqresApi.create_user(data.CREATE_USER);\nassert.equal(response.status, 201);",
               "err": {},
-              "uuid": "a302a1b1-0274-4993-a73c-b0e76c0f3421",
-              "parentUUID": "61e1e52b-80af-44a3-9e66-d58124c20b0b",
+              "uuid": "7795ee50-55a2-4051-a893-a50607f37104",
+              "parentUUID": "40443b0c-4853-49cd-bf91-a348d8777a96",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a302a1b1-0274-4993-a73c-b0e76c0f3421"
+            "7795ee50-55a2-4051-a893-a50607f37104"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 571,
+          "duration": 606,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "7ab21d26-c2a2-4378-ae5d-2dcc21f95116",
+          "uuid": "df14c6c7-16d0-4e4e-8de5-5c89088a7100",
           "title": "List User",
           "fullFile": "D:\\QA\\QA_NestAcademy\\nestAPI\\tests\\scenarios\\list-user.test.js",
           "file": "\\tests\\scenarios\\list-user.test.js",
@@ -77,7 +77,7 @@
               "title": "Should successful get the list users in page = 2",
               "fullTitle": "List User Should successful get the list users in page = 2",
               "timedOut": false,
-              "duration": 372,
+              "duration": 447,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,26 +86,26 @@
               "context": null,
               "code": "const param = getParams(data.LIST_USER_PARAM['page']);\nconst response = await ReqresApi.list_user(param);\nassert.equal(response.status, 200);",
               "err": {},
-              "uuid": "c4a9d08f-fbfe-4aa8-8ff5-66e919409c99",
-              "parentUUID": "7ab21d26-c2a2-4378-ae5d-2dcc21f95116",
+              "uuid": "c0642619-6ba4-413d-a1bd-0bff90377fdc",
+              "parentUUID": "df14c6c7-16d0-4e4e-8de5-5c89088a7100",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c4a9d08f-fbfe-4aa8-8ff5-66e919409c99"
+            "c0642619-6ba4-413d-a1bd-0bff90377fdc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 372,
+          "duration": 447,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "ae6bc7db-4df0-4cb4-91dc-80410f8bf4ab",
+          "uuid": "beeff812-fbfe-4173-8b71-cd30fee0f5cd",
           "title": "Register",
           "fullFile": "D:\\QA\\QA_NestAcademy\\nestAPI\\tests\\scenarios\\register.test.js",
           "file": "\\tests\\scenarios\\register.test.js",
@@ -116,7 +116,7 @@
               "title": "Should unsuccessful register when insert invalid data",
               "fullTitle": "Register Should unsuccessful register when insert invalid data",
               "timedOut": false,
-              "duration": 414,
+              "duration": 424,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -125,20 +125,39 @@
               "context": null,
               "code": "const response = await ReqresApi.register(data.INVALID_REGISTER);\nassert.equal(response.status, 400);\nassert.containsAllKeys(response.data, ['error']);\nassert.isString(response.data.error);\nassert.equal(response.data.error, data.ERROR_REGISTER_MESSAGE.error);",
               "err": {},
-              "uuid": "5e42f72d-d71c-4aa3-a04f-398ffe614238",
-              "parentUUID": "ae6bc7db-4df0-4cb4-91dc-80410f8bf4ab",
+              "uuid": "d6abc86c-55c9-4995-ac1b-b6ea4ef529f2",
+              "parentUUID": "beeff812-fbfe-4173-8b71-cd30fee0f5cd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should successful register when insert valid data",
+              "fullTitle": "Register Should successful register when insert valid data",
+              "timedOut": false,
+              "duration": 457,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await ReqresApi.register(data.VALID_REGISTER);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "cf9bdbb5-eeaa-4b58-b457-758fcbd5211f",
+              "parentUUID": "beeff812-fbfe-4173-8b71-cd30fee0f5cd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5e42f72d-d71c-4aa3-a04f-398ffe614238"
+            "d6abc86c-55c9-4995-ac1b-b6ea4ef529f2",
+            "cf9bdbb5-eeaa-4b58-b457-758fcbd5211f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 414,
+          "duration": 881,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
